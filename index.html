@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্বাস্থ্য ও ডায়েট ক্যালকুলেটর</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>আপনার স্বাস্থ্য ও ডায়েট</h1>
+
+        <div class="input-form">
+            <label for="age">বয়স (বছর):</label>
+            <input type="number" id="age" placeholder="যেমন: ২৫">
+
+            <label for="heightCm">উচ্চতা (সে.মি.):</label>
+            <input type="number" id="heightCm" placeholder="যেমন: ১৭০">
+
+            <label for="weight">ওজন (কেজি):</label>
+            <input type="number" id="weight" placeholder="যেমন: ৬৫">
+
+            <label for="gender">লিঙ্গ:</label>
+            <select id="gender">
+                <option value="male">পুরুষ</option>
+                <option value="female">মহিলা</option>
+            </select>
+
+            <label for="activity">আপনি কি অ্যাথলেট?</label>
+            <select id="activity">
+                <option value="no">না (নন-অ্যাথলেট)</option>
+                <option value="yes">হ্যাঁ (অ্যাথলেট)</option>
+            </select>
+
+            <button onclick="calculateAndShowResults()">ফলাফল দেখুন</button>
+        </div>
+
+        <div id="results" class="results-section" style="display:none;">
+            <h2>ফলাফল:</h2>
+            <p id="bmiResult"></p>
+            <p id="idealWeightResult"></p>
+            <p id="weightDifferenceResult"></p>
+            <p id="calorieNeedsResult"></p>
+            <p id="proteinNeedsResult"></p>
+
+            <h3>প্রস্তাবিত ডায়েট প্ল্যান:</h3>
+            <p>(এটি একটি সাধারণ উদাহরণ। আপনার প্রয়োজন অনুযায়ী খাবার পরিবর্তন করতে পারেন।)</p>
+            <ul id="dietPlanList"></ul>
+            <p id="dietTotals"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
